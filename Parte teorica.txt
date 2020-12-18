@@ -1,0 +1,9 @@
+Horacio Antonio Camacho Holguin 2180986
+1) HTML se define como?:
+	Un lenguaje de marcado que define la estructura de tu contenido.
+2) CSS se define como?:
+	Es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML.
+3) En qué lugar se ejecuta generalmente el código JavaScript?:
+	por lo general en el cliente, pero se puede ejecutar en el servidor.
+4) jquery es?:
+	una biblioteca multiplataforma de JavaScript.

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla 6 punto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Tabla.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+
+    var editando = false;
+
+    $(document).ready(function(){
+        $('#DatosEditados').hide();
+    });
+
+    </script>
+</head>
+<body>
+<div style="width: 100%;height: 40px"></div>
+<div style="width:800px;margin-left: 10%;margin-right: 10%">
+    <form action="pru.html" method="get" onsubmit="return validar()" id="forma">
+        <table class="table" style="width: 1200px;">
+            <thead style="background-color: dimgrey;color: aliceblue">
+              <tr>
+                <th scope="col">Alimento</th>
+                <th scope="col">Calorias</th>
+                <th scope="col">Grasas</th>
+                <th scope="col">Proteina</th>
+                <th scope="col">Carbohidratos</th>
+                <th scope="col">Ok</th>
+                <th scope="col">Opciones</th>
+              </tr>
+            </thead>
+            <tbody style="background-color: aliceblue">
+
+
+              <tr id="coll1">
+                    <td id="coll11">Arandano</td>
+                    <td id="coll12">49</td>
+                    <td id="coll13">0.2</td>
+                    <td id="coll14">0.4</td>
+                    <td id="coll15">12.7</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c.552 0 1-.672 1-1.5S10.552 5 10 5s-1 .672-1 1.5S9.448 8 10 8z"/>
+                        </svg>
+                    </td>
+                     <td>
+                        <button type="button" class="btn btn-primary" onclick="editarRow('coll1')">Editar</button>
+                     </td>   
+                </tr>
+
+                <tr id="coll2">
+                    <td id="coll21">Platano</td>
+                    <td id="coll22">49</td>
+                    <td id="coll23">0.2</td>
+                    <td id="coll24">0.4</td>
+                    <td id="coll25">12.7</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c.552 0 1-.672 1-1.5S10.552 5 10 5s-1 .672-1 1.5S9.448 8 10 8z"/>
+                        </svg>
+                    </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="editarRow('coll2')">Editar</button>
+                         </td>    
+                    </tr>
+
+
+                    <tr id ="coll3">
+                        <td id="coll31">Cereza</td>
+                        <td id="coll32">49</td>
+                        <td id="coll33">0.2</td>
+                        <td id="coll34">0.4</td>
+                        <td id="coll35">12.7</td>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c.552 0 1-.672 1-1.5S10.552 5 10 5s-1 .672-1 1.5S9.448 8 10 8z"/>
+                            </svg>
+                        </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" onclick="editarRow('coll3')">Editar</button>
+                             </td>    
+                        </tr>
+            </tbody>
+          </table>
+        <p>Contenido nutricional por cada 100g de alimento</p>
+        <div style="height: 20px"></div>
+
+          <div id="DatosEditados">
+
+            <p>Pulse Aceptar para guardar los datos o cancelar para anularlos</p>
+            <button  type="submit" class="btn btn-outline-secondary">Aceptar</button>
+            <button class="btn btn-outline-danger" id="btnCancel" type="reset" onclick="location.reload()">Cancelar</button>
+
+          </div>
+    </form>
+</div>
+</body>
